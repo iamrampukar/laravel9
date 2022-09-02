@@ -16,6 +16,10 @@ class BlogController extends Controller
     public function index()
     {
         //
+        $data = [
+            'first_name' => 'Ram Pukar',
+            'last_name' => 'Chaudahry',
+        ];
     }
 
     /**
