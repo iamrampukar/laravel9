@@ -22,8 +22,7 @@ class BlogController extends Controller
         ];
     }
 
-    public function isLogin()
-    {
+    public function isLogin() {
         return [];
     }
 
