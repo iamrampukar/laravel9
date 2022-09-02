@@ -2,9 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Blog;
 use App\Http\Requests\StoreBlogRequest;
 use App\Http\Requests\UpdateBlogRequest;
+use App\Models\Blog;
 
 class BlogController extends Controller
 {
@@ -17,9 +17,14 @@ class BlogController extends Controller
     {
         //
         $data = [
-            'first_name' => 'Ram Pukar',
-            'last_name' => 'Chaudahry',
+            'first_name'        => 'Ram Pukar',
+            'last_name' =>'Chaudahry'
         ];
+    }
+
+    public function isLogin()
+    {
+        return [];
     }
 
     /**
