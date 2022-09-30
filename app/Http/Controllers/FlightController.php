@@ -18,6 +18,7 @@ class FlightController extends Controller
      */
     public function index(Request $request)
     {
+        // Bootstrap 4
         if ($request->ajax()) {
             $data = Flight::select('id','first_name','last_name')->get();
             return Datatables::of($data)->addIndexColumn()
@@ -30,6 +31,23 @@ class FlightController extends Controller
         }
 
         return view('flight.index');
+    }
+
+    public function flightLanding(Request $request)
+    {
+        // Bootstrap 5
+        if ($request->ajax()) {
+            $data = Flight::select('id','first_name','last_name')->get();
+            return Datatables::of($data)
+            ->addIndexColumn()
+            ->addColumn('action', function($row){
+                $btn = '<a href="javascript:void(0)" class="edit btn btn-primary btn-sm">View</a>';
+                return $btn;
+            })
+            ->rawColumns(['action'])
+            ->make(true);
+        }
+        return view('flight.landing');
     }
 
     /**

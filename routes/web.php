@@ -19,3 +19,4 @@ Route::get('/', function () {
 });
 
 Route::get('/flight/list',[FlightController::class,'index'])->name('flight.list');
+Route::get('/flight/landing',[FlightController::class,'flightLanding'])->name('flight.landing');
