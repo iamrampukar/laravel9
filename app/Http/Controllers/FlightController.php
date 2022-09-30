@@ -5,6 +5,9 @@ namespace App\Http\Controllers;
 use App\Models\Flight;
 use App\Http\Requests\StoreFlightRequest;
 use App\Http\Requests\UpdateFlightRequest;
+use App\DataTables\FlightDataTable;
+use Illuminate\Http\Request;
+use DataTables;
 
 class FlightController extends Controller
 {
@@ -13,9 +16,20 @@ class FlightController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        //
+        if ($request->ajax()) {
+            $data = Flight::select('id','first_name','last_name')->get();
+            return Datatables::of($data)->addIndexColumn()
+                ->addColumn('action', function($row){
+                    $btn = '<a href="javascript:void(0)" class="btn btn-primary btn-sm">View</a>';
+                    return $btn;
+                })
+                ->rawColumns(['action'])
+                ->make(true);
+        }
+
+        return view('flight.index');
     }
 
     /**

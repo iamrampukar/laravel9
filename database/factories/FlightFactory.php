@@ -17,7 +17,14 @@ class FlightFactory extends Factory
     public function definition()
     {
         return [
-            //
+            'first_name'        => fake()->firstName(),
+            'last_name'         => fake()->lastName(),
+            'phone'             => fake()->phoneNumber(),
+            'country'           => fake()->country(),
+            'state'             => fake()->state(),
+            'city'              => fake()->city(),
+            'postal_code'       => fake()->postcode(),
+            'salary'            => fake()->numberBetween(10000, 100000),
         ];
     }
 }
