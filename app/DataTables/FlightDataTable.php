@@ -74,7 +74,14 @@ class FlightDataTable extends DataTable
                   ->width(60)
                   ->addClass('text-center'),
             Column::make('id'),
-            // Column::make('add your columns'),
+            Column::make('first_name'),
+            Column::make('last_name'),
+            Column::make('phone'),
+            Column::make('country'),
+            Column::make('state'),
+            Column::make('city'),
+            Column::make('postal_code'),
+            Column::make('salary'),
             Column::make('created_at'),
             Column::make('updated_at'),
         ];

@@ -50,6 +50,11 @@ class FlightController extends Controller
         return view('flight.landing');
     }
 
+    public function arriable(FlightDataTable $dataTable)
+    {
+         return $dataTable->render('flight.arriable');
+    }
+
     /**
      * Show the form for creating a new resource.
      *
