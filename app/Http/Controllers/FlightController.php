@@ -55,6 +55,11 @@ class FlightController extends Controller
          return $dataTable->render('flight.arriable');
     }
 
+    public function dataTableBTN(FlightDataTable $dataTable)
+    {
+         return $dataTable->render('flight.data_table_btn');
+    }
+
     /**
      * Show the form for creating a new resource.
      *

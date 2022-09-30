@@ -13,6 +13,7 @@
         "opcodesio/log-viewer": "^1.2",
         "prettus/l5-repository": "^2.8",
         "yajra/laravel-datatables": "9.0",
+        "yajra/laravel-datatables-buttons": "9.0",
         "yajra/laravel-datatables-oracle": "^10.0"
     },
     "require-dev": {

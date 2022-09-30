@@ -21,3 +21,4 @@ Route::get('/', function () {
 Route::get('/flight/list',[FlightController::class,'index'])->name('flight.list');
 Route::get('/flight/landing',[FlightController::class,'flightLanding'])->name('flight.landing');
 Route::get('/flight/arriable',[FlightController::class,'arriable'])->name('flight.arriable');
+Route::get('/flight/data-table-btn',[FlightController::class,'dataTableBTN'])->name('flight.data_table_btn');
