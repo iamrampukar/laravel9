@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\FlightController;
+use App\Http\Controllers\HotelController;
 
 /*
 |--------------------------------------------------------------------------
@@ -22,3 +23,4 @@ Route::get('/flight/list',[FlightController::class,'index'])->name('flight.list'
 Route::get('/flight/landing',[FlightController::class,'flightLanding'])->name('flight.landing');
 Route::get('/flight/arriable',[FlightController::class,'arriable'])->name('flight.arriable');
 Route::get('/flight/data-table-btn',[FlightController::class,'dataTableBTN'])->name('flight.data_table_btn');
+Route::get('/hotel/list',[HotelController::class,'index'])->name('hotel.index');
